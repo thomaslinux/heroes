@@ -4,7 +4,7 @@
 <div>
   <div class="heroes">
     @for (hero of heroes; track $index) {
-      <img [src]="hero.image" alt="{{hero.name}}">
+      <img [routerLink]="['/hero',hero.id]" [src]="hero.image" alt="{{hero.name}}">
     }
    </div>
 </div>
