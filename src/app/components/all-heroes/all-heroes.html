@@ -2,5 +2,9 @@
   <button (click)="addHeroes()">Chargez !!</button>
 </div>
 <div>
-  {{ heroes | json }}
+  <div class="heroes">
+    @for (hero of heroes; track $index) {
+      <img [src]="hero.image" alt="{{hero.name}}">
+    }
+   </div>
 </div>
