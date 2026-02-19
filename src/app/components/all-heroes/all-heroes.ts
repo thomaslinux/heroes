@@ -11,8 +11,12 @@ export class AllHeroes {
 
 
   constructor() {
-    this.heroes = [];
+    this.heroes = [{name : 'Hulk'}];
   }
 
-
+  public addHeroes() {
+    this.heroes.push({name : 'Hulk'});
+    this.heroes.push({name : 'Batman'});
+    this.heroes.push({name : 'Buffy'});
+  }
 }
