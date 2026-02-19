@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
+import {JsonPipe} from '@angular/common';
 
 @Component({
   selector: 'app-all-heroes',
-  imports: [],
+  imports: [
+    JsonPipe
+  ],
   templateUrl: './all-heroes.html',
   styleUrl: './all-heroes.css',
 })
@@ -11,7 +14,7 @@ export class AllHeroes {
 
 
   constructor() {
-    this.heroes = [{name : 'Hulk'}];
+    this.heroes = [];
   }
 
   public addHeroes() {
