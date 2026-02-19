@@ -1,4 +1,18 @@
-div {
+.center {
   display: flex;
   justify-content: center;
+}
+
+button:hover {
+  background-color: red;
+}
+
+.heroes {
+  /*flex-wrap: wrap;*/
+  /*width: auto;*/
+  /*display: inline-block;*/
+  margin-top: 20px;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
 }
