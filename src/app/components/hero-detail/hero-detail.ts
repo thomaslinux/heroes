@@ -18,7 +18,9 @@ export class HeroDetail {
 
     this.id = this.route.snapshot.paramMap.get('id');
     if(this.id) {
-      this.hero = this.heroService.findHeroById(+this.id);
+      this.heroService.findHeroById(+this.id).subscribe(
+        (hero:Hero) => this.hero = hero
+      );
     }
   }
 

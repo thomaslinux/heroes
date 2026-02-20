@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Hero} from '../models/hero';
 import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -18,7 +19,7 @@ export class HeroApi {
     return this.http.get<Hero[]>(`${this.BASE_URL}/all.json`);
   }
 
-  public findHeroById(id: number): Hero | undefined {
-    return this.heroes.find((hero: Hero): boolean => hero.id == id);
+  public findHeroById(id: number): Observable<Hero> {
+    return this.http.get<Hero>(`${this.BASE_URL}/id/${id}.json`)
   }
 }
