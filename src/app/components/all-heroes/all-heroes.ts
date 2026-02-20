@@ -21,6 +21,8 @@ export class AllHeroes {
   }
 
   public addHeroes() {
-    this.heroes = this.heroService.findAllHeroes();
+   this.heroService.findAllHeroes().subscribe(
+     (heroes : Hero[]) => this.heroes = heroes
+   );
   }
 }
