@@ -24,4 +24,13 @@ export class AllHeroes {
     this.heroes.push({id : 2, name : 'Batman', image : 'https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/71-batman-ii.jpg'});
     this.heroes.push({id : 3, name : 'Buffy', image : 'https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/140-buffy.jpg'});
   }
+
+  public findAllHeroes() {
+    return this.heroes;
+  }
+
+  public findHeroById(id:number) {
+    return this.heroes.find((hero:Hero) => hero.id == id);
+  }
+
 }
