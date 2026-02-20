@@ -4,8 +4,10 @@
 <div>
   <div class="heroes">
     @for (hero of heroes; track $index) {
+      <div class="hero">
       <p>{{hero.name}}</p>
       <img [routerLink]="['/hero',hero.id]" [src]="hero.images.sm" alt="{{hero.name}}">
+      </div>
     }
    </div>
 </div>
