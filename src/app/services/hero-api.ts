@@ -12,10 +12,6 @@ export class HeroApi {
 
   constructor(private http : HttpClient) {
     this.heroes = [];
-    this.heroes.push({id : 1, name : 'Hulk', image : 'https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/332-hulk.jpg'});
-    this.heroes.push({id : 2, name : 'Batman', image : 'https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/71-batman-ii.jpg'});
-    this.heroes.push({id : 3, name : 'Buffy', image : 'https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/140-buffy.jpg'});
-
   }
 
   public findAllHeroes(){
