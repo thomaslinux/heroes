@@ -16,3 +16,15 @@ button:hover {
   gap: 5px;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
 }
+.hero p {
+  position: absolute;
+  color: rgba(0,148,2,0)
+}
+
+.hero:hover,
+.hero:hover p
+{
+  transform: scale(110%);
+  color: unset;
+  background: aliceblue;
+}
