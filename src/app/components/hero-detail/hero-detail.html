@@ -1,5 +1,4 @@
 <p>
-
   Infos du héros {{ id }}, coming soon !!
-
 </p>
+<img [routerLink]="['/hero',hero!.id]" [src]="hero!.image" alt="{{hero!.name}}">
