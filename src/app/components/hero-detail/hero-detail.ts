@@ -12,12 +12,14 @@ import {HeroApi} from '../../services/hero-api';
 export class HeroDetail {
 
   public id : string | null
-  hero;
+  public hero : Hero | undefined
 
   constructor(private route: ActivatedRoute, private heroService : HeroApi) {
 
     this.id = this.route.snapshot.paramMap.get('id');
-    this.hero = this.heroService.findHeroById(Number.parseInt(this.id!));
+    if(this.id) {
+      this.hero = this.heroService.findHeroById(Number.parseInt(this.id));
+    }
   }
 
 
