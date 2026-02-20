@@ -1,4 +1,10 @@
-<p>
-  Infos du héros {{ id }}, coming soon !!
-</p>
-<img [routerLink]="['/hero',hero!.id]" [src]="hero!.image" alt="{{hero!.name}}">
+@if (hero) {
+  <div>
+    {{hero.name}}
+    <img [src]="hero.image" [alt]="hero.name">
+  </div>
+} @else {
+  <div>
+    Ooops ! Ce héros n'existe pas !
+  </div>
+}
