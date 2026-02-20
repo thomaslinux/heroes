@@ -9,23 +9,15 @@ import {Observable} from 'rxjs';
 export class HeroApi {
 
   private readonly BASE_URL: string = "https://akabab.github.io/superhero-api/api"
-  public heroes: Hero[]; // Array<Hero>
 
   constructor(private http: HttpClient) {
-    this.heroes = [];
   }
 
   public findAllHeroes() {
-    this.http.get<Hero[]>(`${this.BASE_URL}/all.json`).subscribe(
-      ((heroes: Hero[]) => this.heroes = heroes)
-    )
-    return this.heroes;
+    return this.http.get<Hero[]>(`${this.BASE_URL}/all.json`);
   }
 
   public findHeroById(id: number): Observable<Hero> {
-    // return this.http.get<Hero>(`${this.BASE_URL}/id/${id}.json`)
-    return this.heroes.find(
-      (hero: Hero) => hero.id = id
-    )
+    return this.http.get<Hero>(`${this.BASE_URL}/id/${id}.json`);
   }
 }
